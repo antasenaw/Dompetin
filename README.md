@@ -22,14 +22,6 @@ Dompetin is a modern personal finance management application designed to help us
 - **Inflection Points (Second Derivative)**: Detect significant changes in financial trends.
 - **Exponential Growth**: Analyze the growth rate of income over time.
 
-### **4. Responsive Design**
-- Optimized for both desktop and mobile devices.
-- Ensures a seamless user experience across all screen sizes.
-
-### **5. Data Storage**
-- Uses **localStorage** to save transactions and balances locally.
-- Ensures data persistence even after the app is closed or refreshed.
-
 ---
 
 ## Technologies Used
@@ -39,6 +31,5 @@ Dompetin is a modern personal finance management application designed to help us
 - **State Management**: React Hooks (`useState`, `useEffect`)
 - **Data Visualization**: Chart.js
 - **Styling**: Tailwind CSS and custom CSS
-- **Storage**: LocalStorage for offline data persistence
 
 ---
