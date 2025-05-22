@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    background: #383a47;
+    border-bottom: 2px solid #2d3748;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .app-logo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+  }
+  
+  .app-title {
+    font-size: 2rem;
+    color: #f1f5f9;
+    margin: 0;
+  }
+  
+  .app-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    gap: 1rem; /* Space between logo and title */
+  }
+  
+  .app-logo-link:hover {
+    opacity: 0.9; /* Optional hover effect */
+  }
+
+  .about-btn {
+    background: #334155;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;      /* match .action-btn */
+    font-weight: 600;         /* match .action-btn */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; /* match .action-btn */
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-btn:hover {
+    background: #475569;
+  }
+  
+  .about-modal {
+    max-width: 800px;
+    width: 95vw;
+    background: #1a1b23;
+    color: #e2e8f0;
+    border-radius: 16px;
+    padding: 3rem;
+    margin: 2rem auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .about-modal h2 {
+    color: #f1f5f9;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  .about-modal h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #a5b4fc;
+    border-radius: 2px;
+  }
+  
+  .about-desc {
+    margin: 2rem auto;
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 700px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+  }
+  
+  .profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+  
+  .profile-card {
+    background: #272b33 ;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+  }
+
+  .profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    background: #2d3748;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(165, 180, 252, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .profile-name {
+    color: #f1f5f9;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-role {
+    color: #a5b4fc;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(165, 180, 252, 0.1);
+    border-radius: 20px;
+    display: inline-block;
+  }
+
+  .profile-ig {
+    margin-top: 1.2rem;
+    color: #a5f3fc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(165, 243, 252, 0.1);
+    border-radius: 6px;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .profile-ig:hover {
+    color: #38bdf8;
+    background: rgba(165, 243, 252, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: #cbd5e1;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+
+  .close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f1f5f9;
+  }
+
+  /* Add these styles to your existing Header.css */
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.guide-btn {
+  background: #334155;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide-btn:hover {
+  background: #334155;
+}
+
+.guide-modal {
+  max-width: 900px;
+  width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #1a1b23;
+  color: #e2e8f0;
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin: 2rem auto;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.guide-content {
+  margin-top: 2rem;
+}
+
+.guide-section {
+  margin-bottom: 3rem;
+  padding: 1.8rem;
+  background: #272b33;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.guide-section:last-child {
+  margin-bottom: 0;
+}
+
+.guide-section h3 {
+  color: #a5b4fc;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.guide-section h3::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 24px;
+  background: #a5b4fc;
+  border-radius: 2px;
+}
+
+.guide-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.guide-section li {
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.guide-section li:last-child {
+  margin-bottom: 0;
+}
+
+.guide-section strong {
+  color: #f1f5f9;
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.guide-section p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.guide-note {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 4px solid #3b82f6;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #93c5fd;
+}
+
+.guide-warning {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(244, 63, 94, 0.1);
+  border-left: 4px solid #f43f5e;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #fda4af;
+}
+
+.guide-tip {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(34, 197, 94, 0.1);
+  border-left: 4px solid #22c55e;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #86efac;
+}
+
+.guide-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.guide-modal::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+.guide-modal::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+.guide-modal::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Ubah tata letak menjadi kolom */
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .header-left {
+    gap: 0.5rem; /* Kurangi jarak antar elemen */
+  }
+
+  .app-title {
+    font-size: 1.5rem; /* Kurangi ukuran font */
+  }
+
+  .header-buttons {
+    width: 100%;
+    justify-content: space-between; /* Atur tombol agar tersebar */
+    margin-top: 1rem;
+  }
+
+  .about-btn, .guide-btn {
+    width: 48%; /* Buat tombol lebih kecil agar muat di layar kecil */
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* About Modal adjustments for mobile */
+@media (max-width: 768px) {
+  .about-modal {
+    padding: 1.5rem; /* Kurangi padding */
+    margin: 1rem auto;
+  }
+
+  .about-modal h2 {
+    font-size: 1.5rem; /* Kurangi ukuran heading */
+  }
+
+  .about-desc {
+    font-size: 1rem; /* Kurangi ukuran font */
+    padding: 1rem;
+  }
+
+  .profiles-grid {
+    grid-template-columns: 1fr; /* Ubah grid menjadi satu kolom */
+    gap: 1rem;
+  }
+
+  .profile-card {
+    padding: 1rem; /* Kurangi padding */
+  }
+
+  .profile-avatar {
+    width: 80px; /* Kurangi ukuran avatar */
+    height: 80px;
+  }
+
+  .profile-name {
+    font-size: 1rem; /* Kurangi ukuran font */
+  }
+
+  .profile-role {
+    font-size: 0.9rem; /* Kurangi ukuran font */
+  }
+
+  .profile-ig {
+    font-size: 0.85rem; /* Kurangi ukuran font */
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* Guide Modal adjustments for mobile */
+@media (max-width: 768px) {
+  .guide-modal {
+    padding: 1.5rem; /* Kurangi padding */
+    margin: 1rem auto;
+  }
+
+  .guide-section {
+    padding: 1rem; /* Kurangi padding */
+  }
+
+  .guide-section h3 {
+    font-size: 1.2rem; /* Kurangi ukuran heading */
+  }
+
+  .guide-section li {
+    padding: 0.8rem; /* Kurangi padding */
+    font-size: 0.9rem; /* Kurangi ukuran font */
+  }
+
+  .guide-note, .guide-warning, .guide-tip {
+    font-size: 0.85rem; /* Kurangi ukuran font */
+    padding: 0.8rem;
+  }
+}
+
+/* Scrollbar adjustments for mobile */
+@media (max-width: 768px) {
+  .guide-modal::-webkit-scrollbar {
+    width: 6px; /* Kurangi lebar scrollbar */
+  }
+
+  .guide-modal::-webkit-scrollbar-thumb {
+    background: #475569;
+  }
+}
