@@ -1,12 +1,44 @@
-# React + Vite
+# Dompetin - Personal Finance Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dompetin is a modern personal finance management application designed to help users track their income and expenses, analyze financial trends, and make informed decisions about their financial health. Built with **React** and **Vite**, Dompetin provides an intuitive interface and powerful features for managing your finances.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+### **1. Transaction Management**
+- Add, edit, and delete transactions with categories for income and expenses.
+- Categorize transactions into predefined groups like food, transport, salary, and more.
+- View recent transactions in a clean and organized layout.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### **2. Financial Visualization**
+- **Bar Charts**: Monthly income and expense trends.
+- **Pie Charts**: Distribution of income and expenses by category.
+- **Line Charts**: Daily balance trends over time.
+
+### **3. Calculus-Based Financial Analysis**
+- **Rate of Change (Derivative)**: Analyze the speed of expense changes over time.
+- **Income Accumulation (Integral)**: Calculate total income over a specific period.
+- **Inflection Points (Second Derivative)**: Detect significant changes in financial trends.
+- **Exponential Growth**: Analyze the growth rate of income over time.
+
+### **4. Responsive Design**
+- Optimized for both desktop and mobile devices.
+- Ensures a seamless user experience across all screen sizes.
+
+### **5. Data Storage**
+- Uses **localStorage** to save transactions and balances locally.
+- Ensures data persistence even after the app is closed or refreshed.
+
+---
+
+## Technologies Used
+
+- **Frontend**: React.js
+- **Build Tool**: Vite
+- **State Management**: React Hooks (`useState`, `useEffect`)
+- **Data Visualization**: Chart.js
+- **Styling**: Tailwind CSS and custom CSS
+- **Storage**: LocalStorage for offline data persistence
+
+---
