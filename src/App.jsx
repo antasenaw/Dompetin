@@ -1029,8 +1029,6 @@ const calculateIncomeIntegral = (transactions) => {
             </div>
           </div>
 
-
-
           <div className="split-box right">
             <div className="history-container">
               <h2 className="history-title">Riwayat Transaksi Terbaru</h2>
@@ -1047,6 +1045,8 @@ const calculateIncomeIntegral = (transactions) => {
             </div>
           </div>
         </div>
+
+
 
         <div className="boxes-container bottom">
           <div className="split-box full-width">
